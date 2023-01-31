@@ -22,8 +22,8 @@ touch series
 echo "${RT}.patch" > series
 cd ..
 quilt push -a
-cp /boot/config-$(uname -r) .config
+#cp /boot/config-$(uname -r) .config
 cd ..
-#cp rt-kernelconfig ${KERNEL}-rt/.config
+cp config-5.13.0-1008-intel ${KERNEL}-rt/.config
 
 echo The kernel ${KERNEL}-rt is now ready to be compiled.

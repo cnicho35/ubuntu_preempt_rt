@@ -11,6 +11,8 @@ a Linux kernel patched with PREEMPT_RT for running real-time applications under 
 
 # Howto
 
+sudo apt install build-essential git libssl-dev libelf-dev libncurses-dev gawk openssl libudev-dev libpci-dev bison dkms autoconf llvm zstd flex libiberty-dev
+
 1. Open up a terminal (STRG + ALT + T) and clone this repository `git clone https://github.com/dtuchsch/ubuntu_preempt_rt.git`.
 2. Run `sh configure.sh`. This will download the linux kernel, apply the PREEMPT_RT patch and overwrite the kernel configuration file with the correct settings for a fully preemptible kernel (`CONFIG_PREEMPT_RT_FULL=y`).
 3. Run the compilation shell script: `sh compile.sh`.
