@@ -1,8 +1,8 @@
 #!/bin/sh
-KERNEL=linux-3.18.29
-RT=patch-3.18.29-rt30
+KERNEL=linux-5.13.1
+RT=patch-5.13-rt1
 cd ${KERNEL}-rt
 export CONCURRENCY_LEVEL=4
-make-kpkg clean
-sudo time make-kpkg --initrd --revision=0 kernel_image kernel_headers
+make clean
+sudo time make -j8 deb-pkg
 cd ..
